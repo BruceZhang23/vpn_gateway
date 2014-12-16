@@ -1,0 +1,12 @@
+[Unit]
+Description=VPN gateway to split traffic into China and non-China IPs.
+After=network.target
+
+[Service]
+ExecStartPre=/usr/local/sbin/route-vpn
+ExecStart=/usr/bin/pon call %i nodetach nolog
+ExecStopPre=/usr/local/sbin/de-route-vpn
+ExecStop=/usr/bin/poff %i
+
+[Install]
+WantedBy=multi-user.target
