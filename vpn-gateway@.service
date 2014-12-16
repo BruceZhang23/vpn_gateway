@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 ExecStartPre=/usr/local/sbin/route-vpn
-ExecStart=/usr/bin/pon call %i nodetach nolog
-ExecStopPre=/usr/local/sbin/de-route-vpn
+ExecStart=/usr/bin/pon %i nodetach nolog
 ExecStop=/usr/bin/poff %i
+ExecStopPost=/usr/local/sbin/de-route-vpn
 
 [Install]
 WantedBy=multi-user.target
