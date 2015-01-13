@@ -9,5 +9,5 @@
 # $5 Peer IP number
 # $6 Optional ``ipparam'' value foo
 
-iptables -t nat -D POSTROUTING -o $1 -j MASQUERADE
 ip route add default via 192.168.59.1
+iptables -t nat -D POSTROUTING -o $1 -j MASQUERADE
