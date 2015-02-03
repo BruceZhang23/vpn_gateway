@@ -2,7 +2,7 @@
 
 # This script is called with the following arguments:
 # Arg Name
-# $1 Interface name
+# $1 Interface name  ppp0
 # $2 The tty
 # $3 The link speed
 # $4 Local IP number
