@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
 
-OLDGW="via 192.168.59.
+OLDGW="via 192.168.59.1"
 
 ip route add 106.186.16.0/24 ${OLDGW}  #new add
 ip route add 172.16.0.0/12 ${OLDGW}
